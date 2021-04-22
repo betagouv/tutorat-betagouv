@@ -1,9 +1,9 @@
 const express = require('express');
 const router = require('./router');
+const helmet = require('helmet');
 
 const cors = require('cors');
 const morgan = require('morgan');
-const bodyParser = require("body-parser");
 const app = express();
 
 const path = require('path');
@@ -15,8 +15,10 @@ app.use('/static', express.static('static'));
 
 app.use(morgan('combined')); 
 app.use(cors()); 
-app.use(bodyParser.json()); 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(helmet({
+    contentSecurityPolicy: false
+  }))
+  
 app.use(router); // Requests processing will be defined in the file router
 
 app.listen(port, () => {
