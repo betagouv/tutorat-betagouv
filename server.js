@@ -13,14 +13,14 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use('/static', express.static('static'));
 
-app.use(morgan('combined')); 
-app.use(cors()); 
+app.use(morgan('combined'));
+app.use(cors());
 app.use(helmet({
-    contentSecurityPolicy: false
-  }))
-  
+  contentSecurityPolicy: false
+}))
+
 app.use(router); // Requests processing will be defined in the file router
 
 app.listen(port, () => {
-    console.log('Server app listening on port ' + port);
+  console.log('Server app listening on port ' + port);
 });
