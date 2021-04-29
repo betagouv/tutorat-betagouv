@@ -13,11 +13,12 @@ router.get('/donnees-personnelles-et-gestion-des-cookies', (req, res) => {
     res.render('donnees-personnelles-et-gestion-des-cookies')
 })
 
-/* 
-router.get('/faq', (req, res) => {
+/* router.get('/faq', (req, res) => {
     res.render('faq')
-})
-*/
+}) */
 
+router.get('*', (req, res) => {
+    res.status(404).send('page not found');
+})
 
 module.exports = router;

@@ -5,8 +5,6 @@ Ce repo contient tout ce qu'il faut pour tourner sur Scalingo. Il suffit de dép
 
 Le deploiement sur scalingo se base sur le fichier [`Procfile`](https://doc.scalingo.com/platform/app/procfile)
 
-    $ npm start
-
 
 ## Lancer ce site localement
 Vous devez avoir npm installé sur votre machine.
@@ -18,3 +16,12 @@ npm install
 npm start
 
 # http://localhost:8000 is ready 
+```
+
+## Lancer ce site localement
+Pour lancer les tests sur les routes
+```bash
+# start tests
+npm test
+```
+
