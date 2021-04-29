@@ -18,8 +18,8 @@ npm start
 # http://localhost:8000 is ready 
 ```
 
-## Lancer ce site localement
-Pour lancer les tests sur les routes
+## Lancer les tests
+Pour lancer les tests
 ```bash
 # start tests
 npm test
