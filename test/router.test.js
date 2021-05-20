@@ -35,6 +35,23 @@ describe('Unit testing the /mentions-legales route', function () {
 
 });
 
+describe('Unit testing the /faq route', function () {
+
+    it('should return OK status', async function () {
+        const response = await request(app)
+            .get('/faq');
+        assert.strictEqual(response.status, 200);
+    });
+
+    it('should return message on rendering', async function () {
+        const response = await request(app)
+            .get('/faq');
+        expect(response.text).to.contain('<!--FAQ-->');
+    });
+
+});
+
+
 describe('Unit testing the /donnees-personnelles-et-gestion-des-cookies', function () {
 
     it('should return OK status', async function () {
@@ -64,5 +81,7 @@ describe('Unit testing the /hello', function () {
             .get('/hello');
         expect(response.text).to.contain('page not found');
     });
+    
+    
 
 });
