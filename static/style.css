@@ -145,6 +145,10 @@ body {
     margin-bottom: 0px !important;
 }
 
+.smallTextAsterisk {
+    font-size: 10px;
+}
+
 /* SECTION 4 */
 #sectionFour {
     background-color: #F8F8F8;
